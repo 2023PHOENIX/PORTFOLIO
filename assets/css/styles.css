@@ -1,0 +1,107 @@
+/* declaring variables in css 
+
+:root {
+  --variable-name: value;
+}
+
+### use the variable like this
+
+selector {
+  property: var(--variable-name);
+}
+
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+/* declaring variables */
+
+:root {
+  --font-family: "Roboto", sans-serf;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fcfcfc;
+  --primary-color: #4756df;
+  --secounday-color: #ff7235;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}
+
+/* variable declared */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* css Reset from default */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--secounday-color);
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+nav {
+  top: 0;
+  left: 0;
+  position: sticky;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3.5rem;
+
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+nav h1{
+    color : var(--primary-color);
+}
+
+nav a{
+    color : var(--primary-color);
+    /* some animation property */
+    transition: var(--transition);
+}
+nav a:hover{
+    color : var(--secounday-color);
+    border-bottom: 2px solid var(--secounday-color);
+}
+nav ul{
+    display: flex;
+    gap : 1.9rem;
+}
+
+nav ul li{
+    font-weight: var(--normal-font);
+}
+/* make it visible */
+.burger-menu{
+    color : var(--primary-color);
+    font-size: 2rem;
+    border : 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
